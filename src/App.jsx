@@ -36,14 +36,16 @@ export const App = () => {
       </div>
       <ul className="grid grid-cols-4 gap-10">
         {pokemons.map((pokemon) => (
-          <li key={pokemon.id} className="bg-blue-700  p-2  rounded-lg">
-            <img
-              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`}
-              alt={`${pokemon.name} sprite`}
-              className="w-[250px] h-[250px]"
-            />
-            <div className="bg-blue-600 rounded-lg border-blue">
-              <p className="text-white capitalize ">{pokemon.name}</p>
+          <li key={pokemon.id} className="bg-white    rounded-lg ">
+            <div className="px-10">
+              <img
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`}
+                alt={`${pokemon.name} sprite`}
+                className="w-[250px] h-[250px]"
+              />
+            </div>
+            <div className="bg-slate-800 rounded-b-lg py-2">
+              <p className="text-white capitalize">{pokemon.name}</p>
             </div>
           </li>
         ))}
