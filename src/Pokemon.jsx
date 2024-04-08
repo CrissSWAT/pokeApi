@@ -33,25 +33,39 @@ export const Pokemon = () => {
   }, [name]);
 
   return (
-    <div className="p-4 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+    <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
       {pokemon ? (
         <div>
-          <div className="mb-4">
-            <h1 className="font-bold text-xl mb-2">Pokémon: {pokemon.name}</h1>
-            <img src={pokemon.imagenUrl} alt={pokemon.name} />
-            <p>ID: {pokemon.id}</p>
-            <p>Types: {pokemon.types.join(", ")}</p>
-            <p>Abilities: {pokemon.abilities.join(", ")}</p>
+          <div className="mb-4  flex flex-col justify-center items-center w-full">
+            <div className=" flex flex-grid gap-4 m-4">
+              <h1 className="font-bold text-xl mb-2 text-slate-800">
+                Pokémon: {pokemon.name}
+              </h1>
+            </div>
+            <img
+              src={pokemon.imagenUrl}
+              alt={pokemon.name}
+              className="w-[250px] h-[250px]"
+            />
           </div>
-          <div>
-            <h2 className="font-bold text-lg">Stats:</h2>
-            <ul>
-              {pokemon.stats.map((stat, index) => (
-                <li key={index}>
-                  {stat.name}: {stat.value}
-                </li>
-              ))}
-            </ul>
+          <div className="flex flex-grid justify-center bg-slate-800 rounded-b-lg gap-x-10 py-5">
+            <div className="text-left text-white capitalize py-0">
+              <p className="font-bold text-lg"> ID: {pokemon.id}</p>
+              <h2 className="font-bold text-lg">Types:</h2>
+              <p> {pokemon.types.join(", ")}</p>
+              <h2 className="font-bold text-lg">Abilities:</h2>
+              <p>{pokemon.abilities.join(", ")}</p>
+            </div>
+            <div className="text-left text-white capitalize">
+              <h2 className="font-bold text-lg">Stats:</h2>
+              <ul>
+                {pokemon.stats.map((stat, index) => (
+                  <li key={index}>
+                    {stat.name}: {stat.value}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       ) : (
