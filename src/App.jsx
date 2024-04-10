@@ -1,9 +1,19 @@
 import axios from "axios";
 import "./App.css";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 export const App = () => {
   const [pokemons, setPokemons] = useState([]);
+  const [inputValue, setInputValue] = useState("");
+  const navigate = useNavigate();
+
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    navigate(`/pokemon/${inputValue}`);
+  };
   const getPokemons = async () => {
     try {
       const response = await axios.get(
@@ -35,6 +45,17 @@ export const App = () => {
           className="w-10"
         />
       </div>
+      <form onSubmit={handleSubmit} className="m-5 w-full h-10">
+        <input
+          type="text"
+          name="nombrePokemon"
+          id="nombrePokemon"
+          placeholder="Pokemon Name"
+          value={inputValue}
+          onChange={handleChange}
+          className="rounded-md w-96 h-10 text-center text-slate-800 border-2 border-slate-800"
+        />
+      </form>
       <ul className="grid grid-cols-4 gap-10">
         {pokemons.map((pokemon) => (
           <Link key={pokemon.id} to={`/pokemon/${pokemon.name}`}>
