@@ -1,8 +1,4 @@
-# React + Vite
+# Esta aplicación fue realizada con Vite.js + React.js, se utilizó Axios para la conexión de tipo http. Realizamos la obtención de datos a la API de Pokémon, además implementamos React Router para enrutar a cada Pokémon que queramos ver su información específica. Para el diseño se utilizó Tailwindcss, además javascript y html.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+URL Demo: https://crissswat.github.io/pokeApi/
+![pokeApi](https://github.com/CrissSWAT/pokeApi/assets/32597254/c88d957e-07d9-4630-8fe6-44fbb19e4ce0)
