@@ -4,11 +4,11 @@ URL Demo: https://crissswat.github.io/pokeApi/
 
 
 #Tecnologías utilizadas:
-API de Pokémon
-JavaScript.
-HTML5
-Framework de css3: Tailwindcss
-Framework de js: React.js
-Compilador Vite.js
+API de Pokémon-
+JavaScript-
+HTML5-
+Framework de css3: Tailwindcss-
+Framework de js: React.js-
+Compilador Vite.js-
 Axios para peticiones http.
 
